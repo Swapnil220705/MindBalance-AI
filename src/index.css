@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MindBalance AI Design System - Mental Health Analytics Platform */
+
+@layer base {
+  :root {
+    /* Base Colors */
+    --background: 220 14% 98%;
+    --background-gradient-start: 220 14% 98%;
+    --background-gradient-end: 220 13% 96%;
+    --foreground: 222 47% 11%;
+
+    /* Primary - Indigo (Calm Intelligence) */
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 239 84% 77%;
+
+    /* Secondary - Emerald (Growth & Recovery) */
+    --secondary: 158 64% 52%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 158 64% 62%;
+
+    /* Mood States */
+    --mood-calm: 158 73% 85%;
+    --mood-anxious: 43 96% 56%;
+    --mood-depressed: 0 84% 60%;
+    --mood-energized: 211 96% 68%;
+    --mood-neutral: 220 13% 91%;
+
+    /* Card & Surface */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --card-glow: 239 84% 67% / 0.05;
+    
+    /* Glass Effect */
+    --glass-bg: 0 0% 100% / 0.7;
+    --glass-border: 220 13% 91%;
+
+    /* Text Hierarchy */
+    --text-primary: 222 47% 11%;
+    --text-secondary: 220 9% 46%;
+    --text-tertiary: 220 9% 46% / 0.65;
+    --text-data: 222 47% 11%;
+
+    /* Interactive Elements */
+    --border: 220 13% 91% / 0.5;
+    --input: 220 13% 91%;
+    --ring: 239 84% 67%;
+    --accent: 158 64% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status Colors */
+    --success: 158 64% 52%;
+    --warning: 43 96% 56%;
+    --error: 0 84% 60%;
+    --info: 211 96% 68%;
+
+    /* Shadows & Elevation */
+    --shadow-sm: 0 1px 2px 0 hsl(220 13% 91% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 13% 91% / 0.1), 0 2px 4px -1px hsl(220 13% 91% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 13% 91% / 0.1), 0 4px 6px -2px hsl(220 13% 91% / 0.05);
+    --shadow-glow: 0 0 20px hsl(239 84% 67% / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(239 84% 67%), hsl(158 64% 52%));
+    --gradient-calm: linear-gradient(135deg, hsl(211 96% 68%), hsl(158 73% 85%));
+    --gradient-background: linear-gradient(180deg, hsl(220 14% 98%), hsl(220 13% 96%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background: linear-gradient(180deg, hsl(var(--background-gradient-start)), hsl(var(--background-gradient-end)));
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
+
+  /* Data & Metrics Typography */
+  .data-text {
+    font-family: 'SF Mono', 'JetBrains Mono', 'Courier New', monospace;
+    @apply tabular-nums;
+  }
+
+  .label-text {
+    @apply uppercase tracking-wider text-xs;
+    opacity: 0.65;
+  }
+}
+
+@layer components {
+  /* Glass Card Effect */
+  .glass-card {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--glass-border));
+    @apply rounded-lg shadow-md;
+  }
+
+  /* Glow Effect */
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 20px hsl(var(--secondary) / 0.3);
+  }
+
+  /* Mood Indicator Styles */
+  .mood-calm {
+    background: hsl(var(--mood-calm));
+    color: hsl(158 64% 25%);
+  }
+
+  .mood-anxious {
+    background: hsl(var(--mood-anxious));
+    color: hsl(43 96% 20%);
+  }
+
+  .mood-depressed {
+    background: hsl(var(--mood-depressed));
+    color: hsl(0 0% 100%);
+  }
+
+  .mood-energized {
+    background: hsl(var(--mood-energized));
+    color: hsl(0 0% 100%);
+  }
+
+  /* Pulse Animation */
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Shimmer Loading */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--card)) 0%,
+      hsl(var(--muted)) 50%,
+      hsl(var(--card)) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+  }
+}
