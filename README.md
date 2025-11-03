@@ -1,73 +1,159 @@
-# Welcome to your Lovable project
+# 🧠 MindBalance-AI  
+### _AI-Powered Mental Health Management and Support Platform_
 
-## Project info
+---
 
-**URL**: https://lovable.dev/projects/f657f640-f124-4f59-a9ee-ad4dbafc090b
+## 🌍 Overview
+**MindBalance-AI** is an intelligent, empathetic digital companion designed to bridge the global mental health treatment gap.  
+It combines **AI-powered emotional understanding**, **data-driven personalization**, and **crisis detection** to support users’ emotional well-being anytime, anywhere.
 
-## How can I edit this code?
+> 🌎 Over **1 billion** people struggle with mental health issues — MindBalance-AI strives to make support accessible, private, and effective for everyone.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## ✨ Key Features
+- 🧭 **Mood Tracking Dashboard:** Track emotions and visualize trends over time (7-day & 30-day).  
+- 💬 **AI Conversational Assistant:** 24/7 chatbot using OpenAI API to provide empathetic responses.  
+- 🧘 **Evidence-Based Interventions:** Includes CBT exercises, mindfulness sessions, and breathing guides.  
+- 🚨 **Crisis Detection & Safety Net:** Detects distress signals and connects users to verified helplines instantly.  
+- 🧩 **Personalized Coping Engine:** Recommends tailored activities and coping strategies using ML models.  
+- 👥 **AI-Moderated Peer Support:** Anonymous community with AI moderation ensuring a safe environment.  
+- 🔒 **Privacy & Compliance:** HIPAA/GDPR compliant encryption, anonymized user data, and federated learning.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f657f640-f124-4f59-a9ee-ad4dbafc090b) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## ⚙️ Tech Stack
 
-**Use your preferred IDE**
+| Layer | Technology |
+|-------|-------------|
+| **Frontend** | React / HTML / CSS / JavaScript |
+| **Backend** | Node.js / Flask / Express |
+| **Database** | MongoDB / PostgreSQL |
+| **AI / NLP** | OpenAI API, TensorFlow, TextBlob, VADER Sentiment |
+| **Authentication** | JWT / OAuth 2.0 |
+| **Hosting** | AWS / Firebase / Render |
+| **Visualization** | Chart.js / D3.js |
+| **Security** | AES-256 encryption, TLS 1.3 |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Installation & Setup
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/MindBalance-AI.git
+cd MindBalance-AI
 ```
+### 2️⃣ Install Dependencies
+```bash
+npm install
+# OR for Python backend
+pip install -r requirements.txt
+```
+### 3️⃣ Set Environment Variables
+Create .env file:
+```bash
+OPENAI_API_KEY=your_openai_api_key
+DATABASE_URL=your_database_url
+JWT_SECRET=your_secret_key
+```
+### 4️⃣ Run the Application
+Run the application:
+For Node.js-
+```bash
+npm start
+```
+For Flask-
+```bash
+python app.py
+```
+Visit the app at 👉 http://localhost:3000
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🧪 Demo Features
+- Mood Tracker with Analytics
+- AI Chatbot with Sentiment Analysis
+- Real-time Crisis Keyword Detection
+- Personalized Coping Recommendations
+- Secure Authentication
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📊 Example Workflow
+1. User logs in and records daily mood.
+2. AI analyzes emotional tone and detects patterns.
+3. Personalized coping exercises are recommended.
+4. Crisis detection activates if severe distress appears.
+5. Dashboard displays weekly progress trends.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 📸 Screenshots
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+<p align="center">
+  <img src="assets/dashboard.png" alt="Dashboard Screenshot" width="600"/>
+</p>
 
-## How can I deploy this project?
+<p align="center">
+  <img src="assets/insights.png" alt="insights Interface" width="600"/>
+</p>
 
-Simply open [Lovable](https://lovable.dev/projects/f657f640-f124-4f59-a9ee-ad4dbafc090b) and click on Share -> Publish.
+<p align="center">
+  <img src="assets/stimuli.png" alt="Stimuli Interface" width="600"/>
+</p>
 
-## Can I connect a custom domain to my Lovable project?
+<p align="center">
+  <img src="assets/community.png" alt="Community Interface" width="600"/>
+</p>
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🧩 Future Enhancements
+- 🩺 Wearable Integration (stress & sleep tracking)
+- 🌐 Multi-language and offline support
+- 📞 Video therapy integration with professionals
+- 🧠 AI-powered journaling & reflection
+- 💬 Group therapy and community events
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## 📈 Impact Goals
+- Reduce untreated population (currently 75% globally).
+- Improve user retention from 3.3% → 10%+ via personalization.
+- Demonstrate measurable improvement using PHQ-9 & GAD-7 scores.
+- Offer 24/7, anonymous, and affordable emotional support.
+
+---
+
+## 🤝 Contributors
+This project exists thanks to the collective effort of developers, designers, and researchers who contributed their time, creativity, and expertise to make MindBalance-AI possible.  
+Contributions of all kinds — from code and design to documentation and testing — are always welcome!  
+
+If you’d like to contribute:
+1. Fork the repository  
+2. Create a new branch (`git checkout -b feature/YourFeature`)  
+3. Commit your changes (`git commit -m "Add your feature"`)  
+4. Push to the branch (`git push origin feature/YourFeature`)  
+5. Open a Pull Request 🚀
+
+---
+
+## 🧾 License
+This project is licensed under the [MIT License](License) – see the LICENSE
+ file for details.
+
+---
+
+## 🌟 Acknowledgments
+- OpenAI – Conversational AI integration
+- WHO & APA – Mental health frameworks and guidelines
+- Hackathon Mentors – Technical and strategic support
+- All contributors who believe in tech for emotional well-being 💙
+
+---
+
+## 💬 Tagline
+> “Your mental health companion — intelligent, empathetic, and always there.”
+
+---
